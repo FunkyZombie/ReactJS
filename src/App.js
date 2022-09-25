@@ -4,11 +4,10 @@ import { Form } from './Form';
 import { useEffect, useState } from "react";
 
 function App() {
-
   const [messageList, setMessageList] = useState([]);
   
   const updateMessage = (value) => {
-    setMessageList(pervState => [...pervState, value])
+      setMessageList(pervState => [...pervState, value])
   }
 
   const MESSAGE_ROBOT = [
@@ -19,6 +18,7 @@ function App() {
     , "Людской цивилизации тотальный демонтаж! Па пара пам!"]
 
   useEffect(() => {
+
     if (messageList.length !== 0 && messageList[messageList.length - 1].author !== 'ROBOT') {
       setTimeout(() => {
         setMessageList(pervState => [...pervState, {author: 'ROBOT', text: MESSAGE_ROBOT[Math.floor(Math.random() * MESSAGE_ROBOT.length)] }])
