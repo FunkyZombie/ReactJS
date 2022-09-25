@@ -1,0 +1,114 @@
+.App {
+  text-align: center;
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  justify-content:center;
+  height: 100vh;
+  min-height: 100%;
+  position: relative;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.message {
+  background-color: #28334b;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family:'Courier New', Courier, monospace;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  text-align: left;
+  justify-items: start;
+  min-height: 100%;
+}
+
+.user__message {
+  display: grid;
+  border-bottom: 1px solid #365693;
+  padding: 15px;
+  column-gap: 10px;
+  row-gap: 5px;
+}
+
+.user__message p {
+  margin: 0;
+  text-align: left;
+}
+
+.text {
+  display: flex;
+  gap: 15px;
+}
+
+.user__message span {
+  text-align: left;
+}
+
+.message__descript {
+  display: flex;
+  gap: 15px;
+}
+
+.message__form {
+  background-color: #aeaaaa;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family:'Courier New', Courier, monospace;
+  max-width: calc(100% - 30px) ;
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+}
+
+
+.message__text {
+  display: flex;
+  background-color: #ffffff;
+  padding: 10px 15px;
+  color: #28334b;
+  border-radius: 25px;
+}
+
+.chat__list {
+  background: rgb(85, 98, 122);
+  height: calc(100vh - 209px);
+}
